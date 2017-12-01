@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Welcome to Django tutorial!</title>
+        {% include 'snippets/css.html' %}
+    </head>
+    <body>
+
+        {% include 'snippets/nav.html' %}
+        
+        <div class = "container">
+            {% block content %}
+            <p> WELCOME TO FRONT PAGE!!!</p>
+            {% endblock content %}
+        </div>
+    </body>
+</html>
