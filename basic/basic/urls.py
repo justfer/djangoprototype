@@ -18,12 +18,15 @@ from django.contrib import admin
 from tutorial.views import *
 from django.views import View
 from django.views.generic import TemplateView
+from tutorial.accountFunctions import *
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', beginpage),
-    url(r'^login/$', loginpage),
-    url(r'^about/$', about),
-    url(r'^contact/$', contact),
+    url(r'^$', BeginPageTemplateView.as_view()),
+    url(r'^login/$', LoginPageTemplateView.as_view()),
+    url(r'^about/$', AboutTemplateView.as_view()),
+    url(r'^contact/$', ContactTemplateView.as_view()),
     url(r'^profile/$', ProfileTemplateView.as_view()),
-    url(r'^register/$', register)
+    url(r'^register/$', RegisterTemplateView.as_view()),
+    url(r'^accountRecord/$', DisplayAccounts)
 ]
