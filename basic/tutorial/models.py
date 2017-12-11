@@ -10,3 +10,17 @@ class Account(models.Model):
 
     def __str__(self):
         return self.id_number + ' ' + self.first_name + ' ' + self.last_name
+
+
+ASSETS_TYPES = (
+    (IT_Equipment),
+    (CISCO Equipment),
+    (Computer Peripheral),
+    (Other Equipment)
+)
+
+class TangibleAssets(models.Model):
+    model_no = models.CharField(max_length=120)
+    serial_no = models.CharField(max_length=120)
+    termination_date = models.DateField() #dae ko aram ano parameters kani
+    asset_type = models.CharField(choices=ASSETS_TYPES,max_length=1)
