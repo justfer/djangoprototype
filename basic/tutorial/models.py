@@ -13,10 +13,10 @@ class Account(models.Model):
 
 
 ASSETS_TYPES = (
-    (IT_Equipment),
-    (CISCO Equipment),
-    (Computer Peripheral),
-    (Other Equipment)
+    ('1','IT Equipment'),
+    ('2','CISCO Equipment'),
+    ('3','Computer Peripheral'),
+    ('0','Other Equipment')
 )
 
 class TangibleAssets(models.Model):
