@@ -1,5 +1,4 @@
 from django.db import models
-from sequences import get_next_value 
 # Create your models here.
 
 class Account(models.Model):
