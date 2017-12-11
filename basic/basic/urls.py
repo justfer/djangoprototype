@@ -28,5 +28,6 @@ urlpatterns = [
     url(r'^contact/$', ContactTemplateView.as_view()),
     url(r'^profile/$', ProfileTemplateView.as_view()),
     url(r'^register/$', RegisterTemplateView.as_view()),
-    url(r'^accountRecord/$', DisplayAccounts)
+    url(r'^accountRecord/$', DisplayAccounts),
+    url(r'^index/(?P<id>\w+)/$', SearchAccountRecords.as_view())
 ]

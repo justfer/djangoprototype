@@ -8,3 +8,6 @@ class Account(models.Model):
     password = models.CharField(max_length=128)
     first_name = models.CharField(max_length=120)
     last_name = models.CharField(max_length=120)
+
+    def __str__(self):
+        return self.id_number + ' ' + self.first_name + ' ' + self.last_name

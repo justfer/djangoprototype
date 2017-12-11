@@ -37,11 +37,11 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-<<<<<<< HEAD
+#<<<<<<< HEAD
 VIRTUAL_ENV="/Users/justferfernandez/Desktop/djangoprototype"
-=======
-VIRTUAL_ENV="/home/kurtdgtapel/Desktop/django/djangoprototype"
->>>>>>> c9682b3ee0e43ccbfa88a02c1006b7f8594f6551
+#=======
+#VIRTUAL_ENV="/home/kurtdgtapel/Desktop/django/djangoprototype"
+#>>>>>>> c9682b3ee0e43ccbfa88a02c1006b7f8594f6551
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
