@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Welcome to Django tutorial!</title>
+        {% include 'snippets/css.html' %}
+    </head>
+    <body>
+
+        {% include 'snippets/nav.html' %}
+        
+        <div class = "container">
+            {% block content %}
+            <p> WELCOME TO FRONT PAGE!!!</p>
+            {{ hello }} {{ var2 }}
+            {% endblock content %}
+            <h1> Account Records from Tutorials: </h1>
+            <ul>
+                {% for obj in object_list %}
+                <li> {{ obj }} </li>
+                {% endfor %}
+            </ul>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Brand</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            {% if request.path == '/' %}
+            <li class= "nav-item active">
+            {% else %}
+            <li class= "nav-item">
+            {% endif %}
+              <a class="nav-link" href="/">Home 
+                </a>
+            <li class="nav-item">
+                {% if request.path == '/about/' %}
+                <li class= "nav-item active">
+                {% else %}
+                <li class= "nav-item">
+                {% endif %}
+              <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+                {% if request.path == '/contact/' %}
+                <li class= "nav-item active">
+                {% else %}
+                <li class= "nav-item">
+                {% endif %}
+                <a class="nav-link" href="/contact">Contact</a>
+            </li>
+            <li class="nav-item">
+                {% if request.path == '/profile/' %}
+                <li class= "nav-item active">
+                {% else %}
+                <li class= "nav-item">
+                {% endif %}
+                    <a class="nav-link" href="/profile">My Profile</a>
+            </li>
+          </ul>
+          <!-- 
+			  	{% if request.path == '/"link"/' %} = "link" is the whole link of url
+                <li class= "nav-item active">
+                {% else %}
+                <li class= "nav-item">
+				{% endif %}
+			 -->
+          <span class="navbar-text text-right mr-2">
+			{% if user_name != NULL%}  
+			Hello {{ user_name }}!
+			{% else %}
+			<a href="/register">Register</a> or <a href="/login">Login</a>
+			{% endif %}
+			</span>
+          <form class="form-inline my-2 my-lg-0" method = "get" action="/index">
+            <input class="form-control mr-sm-2" name="id" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+	  </nav>
+	  <p class= "mt-4 " ></p>

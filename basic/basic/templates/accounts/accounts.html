@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+
+{% block content %}
+<h1> Account Records from Tutorials: </h1>
+
+<ul>
+    {% for obj in object_list %}
+    <li> {{ obj.id }} and {{ obj.id_number }} </li>
+    {% endfor %}
+</ul>
+{% endblock %}
+ 
