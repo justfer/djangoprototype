@@ -34,7 +34,7 @@ kitchen==1.1.1
 kmod==0.1
 langtable==0.0.31
 lxml==3.2.1
-Mako==0.8.1
+Mako==1.2.2
 MarkupSafe==0.11
 netaddr==0.7.5
 netifaces==0.10.4
